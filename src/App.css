@@ -1,38 +1,585 @@
-.App {
-  text-align: center;
+.loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	/*border: 15px solid #e22947;*/
+	min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading h1 {
+	font-family: 'Agency FB';
+	font-size: 2em;
+	margin: 0;
+	color: #e22947;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loading i {
+	color: #e22947;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* --------------------------------- landing_page.css ------------------------------ */
+.header {
+	background: #FF416C;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.App-link {
-  color: #61dafb;
+/*.landing-container {
+	width: 100%;
+	margin: auto
+}*/
+
+.landing-grid {
+	background: #FF416C;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #FF4B2B, #FF416C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	text-align: center;
+	width: 100%;
+	height: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.avatar-img-container {
+	height: 350px;
+	vertical-align: middle;
+	max-width: 100%;
+	padding-top: 4em;
+}
+
+.img-profile {
+	border-radius: 250px;
+	width:394px;
+	height: 400px
+}
+
+.banner-text {
+	background-color: black;
+	opacity: .8;
+	width: 75%;
+	margin: auto;
+	border-radius: 10px;
+	text-align: center;
+	padding-bottom: 1.25em;
+}
+
+.banner-text h1 {
+	font-size: 55px;
+	font-family: 'Agency FB';
+	font-weight: bold;
+	color: #fff;
+}
+
+.banner-text h3 {
+	font-size: 37px;
+	line-height: 1.3em;
+	font-weight: lighter;
+	font-family: 'Agency FB';
+	font-style: italic;
+	color: #fff;
+}
+
+.banner-text hr {
+	border-top: 5px dotted #e22947;
+	width: 50%;
+	margin: auto;
+}
+
+.banner-text p {
+	color: #fff;
+	font-size: 21px;
+	padding: 1em;
+}
+
+.social-links {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+	margin: auto;
+}
+
+.social-links i {
+	font-size: 3em;
+	padding: 8px;
+	color: #FF416C;
+}
+
+.social-links Button {
+	border-radius: 90px;
+}
+/* --------------------------------- landing_page.css ------------------------------ */
+
+/* --------------------------------- about_section.css ------------------------------ */
+.about-section {
+	padding-bottom: 60px;
+	font-family: 'Agency FB';
+	font-size: 3em;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.about-section h1 {
+	font-family: 'Agency FB';
+	font-weight: 700;
+	font-style: italic;
+	color: rgb(54, 68, 95);
+	
+}
+
+.about-section hr {
+	border-top: 7px dotted #e22947;
+	width: 50%;
+	margin: auto;
+}
+
+.about-section p {
+	margin-top: 45px;
+	text-align: justify;
+	font-size: 16px;
+}
+
+.about-grid {
+	width: 50%;
+}
+/* --------------------------------- about_section.css ------------------------------ */
+
+/* --------------------------------- services_page.css ------------------------------ */
+.toogleServices-grid {
+	width: 75%;
+	justify-content: center;
+}
+
+.toogleServices {
+	padding-bottom: 30px;
+	font-family: 'Agency FB';
+	font-size: 5em;
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 25px;
+	color: rgb(54, 68, 95);
+}
+
+.toogleServices h1 {
+	font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+	font-family: 'Agency FB';
+	word-wrap: break-word;
+}
+
+.toogleServices hr {
+	border-top: 7px dotted #e22947;
+	width: 50%;
+	margin: auto;
+}
+
+.toogleServices li {
+	margin-top: 40px;
+	text-align: left;
+	width: 100%;
+	margin-left: 3%;
+}
+
+.toogleServices h2 {
+	font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0px;
+	text-transform: none;
+	font-family: 'Agency FB';
+}
+
+.toogleServices h3 {
+	font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0px;
+	text-transform: none;
+	font-family: 'Agency FB';
+}
+
+.toogleServices p {
+	font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 0px;
+	text-transform: none;
+	font-family: 'Agency FB';
+}
+
+.toogleServices-grid .mdl-cell {
+	border-radius: 28px
+}
+/* --------------------------------- services_page.css ------------------------------ */
+
+/* --------------------------------- projects_section.css ------------------------------ */
+.projects-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	
+}
+
+.card {
+	font-family: 'Agency FB';
+	font-size: 3em;
+	text-transform: uppercase;
+	color: rgb(54, 68, 95);
+	width: 32rem;
+	text-align: justify;
+	margin: 30px;
+}
+
+.card-title.h5 {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.toogleProjects-grid {
+	width: 100%;
+}
+
+.toogleProjects-grid img {
+	width: 100%;
+}
+
+/* --------------------------------- projects_section.css ------------------------------ */
+
+/* --------------------------------- resume_page.css ------------------------------ */
+.resume-left-col div {
+	text-align: center
+}
+
+.resume-left-col img {
+	height: 200px;
+	width: 200px;
+	border-radius: 200px
+}
+
+.resume-left-col h2 {
+	font-family: 'Agency FB';
+	padding-top: 2em
+}
+
+.resume-left-col h4 {
+	font-family: 'Agency FB';
+	color: grey;
+	font-style: italic
+}
+
+.resume-left-col hr {
+	border-top: 3px solid #833FB2;
+	width: 65%
+}
+
+.resume-left-col h5 {
+	font-weight: 700;
+	font-size: 25px;
+	font-family: 'Agency FB';
+}
+
+.resume-left-col p {
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.resume-right-col {
+	background: #27221F;
+	color: #fff;
+	padding: 2em;
+	font-family: 'Agency FB';
+}
+
+.resume-right-col hr {
+	border-top: 3px solid #e22947
+}
+
+.resume-right-col h2 {
+	font-family: 'Agency FB';
+	font-weight: bold;
+}
+
+.resume-experience p {
+	font-family: 'Agency FB';
+    font-size: 18px;
+    font-weight: 700
+}
+
+.resume-experience h4 {
+	font-family: 'Agency FB';
+    font-size: 18px;
+    font-weight: 700
+}
+
+.resume-experience h5 {
+	text-align: right;
+    font-family: 'Agency FB';
+    font-size: 18px
+}
+
+.resume-skills-container {
+	display: flex;
+	font-size: 18px
+}
+/* --------------------------------- resume_page.css ------------------------------ */
+
+/* --------------------------------- contact_page.css ------------------------------ */
+.contact-body {
+	margin: auto;
+	width: 98%;
+	height: 10%;
+	justify-content: center;
+	padding-top: 2em;
+}
+
+.contact-grid {
+	text-align: center;
+	justify-content: center;
+	width: 100%;
+	height: 558px;
+	background: #fff;
+	color: black;
+	margin-bottom: 20px;
+	font-family: 'Agency FB';
+}
+
+.contact-grid img {
+	height: 250px;
+	width: 250px;
+	border-radius: 200px;
+	margin-bottom: 25px;
+	margin-top: 45px
+}
+
+.contact-grid p {
+	width: 75%;
+	margin: auto;
+	padding-top: 1em;
+	font-family: 'Agency FB';
+	font-size: 16px;
+	font-weight: bold;
+	font-style: italic;
+	color: rgb(54, 68, 95)
+}
+
+.contact-grid h2 {
+	font-family: 'Agency FB';
+	padding-top: 35px;
+	text-transform: uppercase;
+	color: rgb(54, 68, 95);
+	font-weight: 600
+}
+
+.contact-grid hr {
+	border-top: 7px dotted #e22947;
+	width: 50%;
+	margin: auto;
+}
+
+.contact-list i {
+	font-size: 66px;
+	padding-right: 5rem;
+	color: rgb(54, 68, 95);
+}
+
+.mdl-list__item-primary-content {
+	font-family: 'Agency FB';
+	font-size: 21.5px;
+	color: rgb(54, 68, 95)
+}
+/* --------------------------------- contact_page.css ------------------------------ */
+
+/* --------------------------------- error_page.css ------------------------------ */
+.error-page {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 81.03vh;
+	flex-direction: column;
+	/*border: 4px solid #272727;*/
+}
+
+.error-page h1 {
+	font-family: 'Agency FB';
+	font-weight: 900;
+	font-size: 75px;	
+}
+
+.error-page h2 {
+	font-family: 'Agency FB';
+	font-size: 37px;
+	font-style: italic;
+}
+
+.error-page h3 {
+	margin-top: 45px;
+}
+
+.error-page section {
+	margin-top: 45px;
+}
+
+.error-page span {
+	transform: rotate(-8deg);
+	display: flex;
+	flex-direction: row;
+	font-size: 55px;
+	margin-top: -35px;
+}
+
+.error-page button {
+	font-size: 25px;
+	padding: 5px;
+	margin: auto 15px;
+	font-family: monospace;
+}
+
+/* --------------------------------- error_page.css ------------------------------ */
+
+/* --------------------------------- footer.css ------------------------------ */
+footer {
+	background-color: black;
+    opacity: 1;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-transform: uppercase
+}
+
+footer p {
+	font-size: 15px;
+    line-height: 1.3em;
+    font-weight: 800;
+    font-family: 'Agency FB';
+    color: #ffffff
+}
+/* --------------------------------- footer.css ------------------------------ */
+
+
+/* --------------------------------- media queries for the website responsivity ------------------------------ */
+@media all and (max-device-width: 1024px) {
+	
+	.img-profile {
+		height: 280px;
+		width: 280px;
+		border-radius: 200px;
+	}
+
+	.banner-text {
+		width: 85%;
+	}
+
+	.social-links {
+		width: 75%;
+	}
+
+	.contact-body {
+		width: 100%;
+	}
+
+	.contact-list {
+		text-align: justify;
+	}
+
+	.contact-list i {
+		font-size: 50px;
+	}
+
+	.toogleProjects-grid {
+		width: 97%;
+	}
+
+}
+
+@media all and (max-width: 480px) {
+
+	.banner-text h1 {
+		font-size: 40px;
+	}
+	
+	.banner-text h3 {
+		font-size: 28px;
+	}
+	
+	.banner-text p {
+		font-size: 17.67px;
+	}
+	
+	.about-grid {
+		width: 100%;
+	}
+	
+	.about-section p {
+		font-size: 13.5px;
+	}
+	
+	.toogleServices h1 {
+		word-wrap: break-word;
+		font-size: 32px;
+	}
+	
+	.toogleServices h2 {
+		word-wrap: break-word;
+		font-size: 25px;
+	}
+	
+	.toogleServices p {
+		word-wrap: break-word;
+	}
+
+	.toogleServices h3 {
+		word-wrap: break-word;
+		font-size: 23px;
+	}
+
+	.toogleServices li {
+		margin-left: 1%;
+	}
+	
+	.resume-left-col h2 {
+		font-size: 25px;
+	}
+	
+	.resume-left-col h4 {
+		font-size: 18px;
+	}
+	
+	.resume-left-col h5 {
+		font-size: 20px;
+	}
+	
+	.resume-left-col p {
+		font-size: 16px;
+	}
+	
+	footer p {
+		font-size: 12px;
+	}
+	
+	.contact-grid h2 {
+		font-size: 24px;
+	}
+	
+	.contact-grid p {
+		font-size: 14px;
+	}
+	
+	.contact-list li {
+		font-size: 1px;
+	}
+}
+
+@media all and (max-width: 768px) {
+
+	.about-section hr {
+		width: 70%;
+	}
+}
+
+@media all and (max-width: 1440px) {
+
+	.toogleServices {
+		width: 94%;
+	}
 }
